@@ -12,8 +12,8 @@ $(document).ready(function () {
   $("#emptyMsg").text("your cart is Empty");
   $("#emptyMsg").css("color", "green");
   $("#cartFootball").on("click", function () {
-     $("#emptyMsg").hide();
-          var temp = 0;
+    $("#emptyMsg").hide();
+    var temp = 0;
     for (let i = 0; i < products.length; i++) {
       if (products[i].id == 102) {
         obj1 = {
@@ -24,36 +24,21 @@ $(document).ready(function () {
           quantity: 1,
         };
 
-        var temp= 0;
-        for (let j =0; j<cartArr.length;j++){
-          if(cartArr[j].id== 102){
-            cartArr[j].quantity += 1 ;
-            temp =1 ;
-            break ;
+        var temp = 0;
+        for (let j = 0; j < cartArr.length; j++) {
+          if (cartArr[j].id == 102) {
+            cartArr[j].quantity += 1;
+            temp = 1;
+            break;
           }
-        } 
-        if (temp != 1){
+        }
+        if (temp != 1) {
           cartArr.push(obj1);
         }
-        
-         
-                          
-            
-          
-        
-     
       }
       display(cartArr);
     }
-   
-   
-
   });
-  
-
-
-
-
 
   $("#cartBasketball").on("click", function () {
     $("#emptyMsg").hide();
@@ -66,30 +51,20 @@ $(document).ready(function () {
           price: 150,
           quantity: 1,
         };
-        var temp= 0;
-        for (let j =0; j<cartArr.length;j++){
-          if(cartArr[j].id== 101){
-            cartArr[j].quantity += 1 ;
-            temp =1 ;
-            break ;
+        var temp = 0;
+        for (let j = 0; j < cartArr.length; j++) {
+          if (cartArr[j].id == 101) {
+            cartArr[j].quantity += 1;
+            temp = 1;
+            break;
           }
-        } 
-        if (temp != 1){
+        }
+        if (temp != 1) {
           cartArr.push(obj1);
         }
-        
-         
-                          
-            
-          
-        
-     
       }
       display(cartArr);
     }
-   
-   
-
   });
   $("#cartSoccer").on("click", function () {
     $("#emptyMsg").hide();
@@ -102,30 +77,20 @@ $(document).ready(function () {
           price: 110,
           quantity: 1,
         };
-        var temp= 0;
-        for (let j =0; j<cartArr.length;j++){
-          if(cartArr[j].id== 103){
-            cartArr[j].quantity += 1 ;
-            temp =1 ;
-            break ;
+        var temp = 0;
+        for (let j = 0; j < cartArr.length; j++) {
+          if (cartArr[j].id == 103) {
+            cartArr[j].quantity += 1;
+            temp = 1;
+            break;
           }
-        } 
-        if (temp != 1){
+        }
+        if (temp != 1) {
           cartArr.push(obj1);
         }
-        
-         
-                          
-            
-          
-        
-     
       }
       display(cartArr);
     }
-   
-   
-
   });
 
   $("#cartTabletennis").on("click", function () {
@@ -139,30 +104,20 @@ $(document).ready(function () {
           price: 130,
           quantity: 1,
         };
-        var temp= 0;
-        for (let j =0; j<cartArr.length;j++){
-          if(cartArr[j].id== 104){
-            cartArr[j].quantity += 1 ;
-            temp =1 ;
-            break ;
+        var temp = 0;
+        for (let j = 0; j < cartArr.length; j++) {
+          if (cartArr[j].id == 104) {
+            cartArr[j].quantity += 1;
+            temp = 1;
+            break;
           }
-        } 
-        if (temp != 1){
+        }
+        if (temp != 1) {
           cartArr.push(obj1);
         }
-        
-         
-                          
-            
-          
-        
-     
       }
       display(cartArr);
     }
-   
-   
-
   });
 
   $("#cartTennis").on("click", function () {
@@ -176,30 +131,20 @@ $(document).ready(function () {
           price: 100,
           quantity: 1,
         };
-        var temp= 0;
-        for (let j =0; j<cartArr.length;j++){
-          if(cartArr[j].id== 105){
-            cartArr[j].quantity += 1 ;
-            temp =1 ;
-            break ;
+        var temp = 0;
+        for (let j = 0; j < cartArr.length; j++) {
+          if (cartArr[j].id == 105) {
+            cartArr[j].quantity += 1;
+            temp = 1;
+            break;
           }
-        } 
-        if (temp != 1){
+        }
+        if (temp != 1) {
           cartArr.push(obj1);
         }
-        
-         
-                          
-            
-          
-        
-     
       }
       display(cartArr);
     }
-   
-   
-
   });
   $("#clearCart").on("click", function () {
     $("table").remove();
@@ -285,29 +230,3 @@ function remove(r) {
     display(cartArr);
   }
 }
- 
- 
- 
-
-
-
-// $(document).ready(function () {
-//   $("#cart1").click(function () {
-//     for (var i = 0; i < products.length; i++) {
-//       if (products[i].id == 101) {
-//         var flag = 0;
-//         for (var m = 0; m < addToCarts.length; m++) {
-//           if (addToCarts[m].id == 101) {
-//             addToCarts[m].count++;
-//             flag = 1;
-//             break;
-//           }
-//         }
-//         if (flag != 1) {
-//           console.log("Inside Flag");
-//           addToCarts.push(products[i]);
-//         }
-//       }
-//     }
-//     display();
-//   });
