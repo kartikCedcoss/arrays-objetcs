@@ -179,8 +179,8 @@ function display(cartArr) {
       "</td> <td>" +
       '<button id=" addManually" onclick="addManually(' +
       parseInt(cartArr[i].id) +
-      ') " >Add</button>  <input type="text" name="add_Quantity" id="quantityIn"  >' +
-      "</td> <td>" +
+      ') " >Add</button>' +  
+      "</td> <td>"
       '<button id="remove" onclick=" remove(' +
       parseInt(cartArr[i].id) +
       ')" ><img src=" images/delete.png"></button>' +
@@ -218,8 +218,9 @@ function addManually(add) {
     if (cartArr[i].id == add) {
       cartArr[i].quantity = quant;
     }
-    display(cartArr);
+   
   }
+  display(cartArr);
 }
 
 function remove(r) {
