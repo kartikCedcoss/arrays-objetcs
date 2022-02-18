@@ -9,8 +9,11 @@ var products = [
 var cartArr = [];
 
 $(document).ready(function () {
+
+  $("#emptyMsg").text("your cart is Empty");
+  $("#emptyMsg").css("color",'green');
   $("#cartFootball").on("click", function () {
-     
+    $("#emptyMsg").hide();
    
     for (let i = 0; i < products.length; i++) {
       if (products[i].id == 102) {
@@ -58,6 +61,7 @@ $(document).ready(function () {
 
 
   $("#cartBasketball").on("click", function () {
+    $("#emptyMsg").hide();
     for (let i = 0; i < products.length; i++) {
       if (products[i].id == 101) {
         var obj1 = {
@@ -85,6 +89,7 @@ $(document).ready(function () {
     display(cartArr);
   });
   $("#cartSoccer").on("click", function () {
+    $("#emptyMsg").hide();
     for (let i = 0; i < products.length; i++) {
       if (products[i].id == 103) {
         var obj1 = {
@@ -112,7 +117,8 @@ $(document).ready(function () {
     display(cartArr);
   });
 
-  $("#cartTabletennis").on("click", function () {
+  $("#cartTabletennis").on("click", function () { 
+    $("#emptyMsg").hide();
     for (let i = 0; i < products.length; i++) {
       if (products[i].id == 104) {
         var obj1 = {
@@ -141,6 +147,7 @@ $(document).ready(function () {
   });
 
   $("#cartTennis").on("click", function () {
+    $("#emptyMsg").hide();
     for (let i = 0; i < products.length; i++) {
       if (products[i].id == 105) {
         var obj1 = {
@@ -166,6 +173,14 @@ $(document).ready(function () {
     }
     display(cartArr);
   });
+  $("#clearCart").on('click',function(){
+    $("table").remove();
+    $("#emptyMsg").show();
+    $("#emptyMsg").text("your cart is Empty");
+$("#emptyMsg").css("color",'green');
+   
+});
+
 });
 
 function display(cartArr) {
@@ -237,4 +252,17 @@ function addManually(add){
     display(cartArr);
   }
 
+}
+
+
+function remove(r){
+  for (let i=0; i<cartArr.length; i++){
+    if(cartArr[i].id==r){
+       
+     
+        cartArr.splice(i,1);
+      
+    }
+    display(cartArr);
+  }
 }
